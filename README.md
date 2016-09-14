@@ -1,5 +1,7 @@
 # AAOS-Abstract-Database-Schema
 
+*TODO:* Needs to go under the process of Normalization
+
 ## Database Name
 
 ### Spec_web
