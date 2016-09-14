@@ -1,6 +1,9 @@
 # AAOS-Abstract-Database-Schema
+- Uses SQLServer (MSSQL)
 
 *TODO:* Needs to go under the process of Normalization
+
+[Click here for SQL Script of Database](https://github.com/austinvernsonger/AAOS-Abstract-Database-Schema/blob/master/ABS.sql)
 
 ## Database Name
 
