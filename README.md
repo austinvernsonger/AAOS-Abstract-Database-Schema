@@ -28,8 +28,9 @@
 		- Submission_CoAuthor
 		- Submission_Questions_Results 
 		- Submissions
-		- 
-		
+
+	
+	
 ## Aspects of the Abstract Submission Process
 - Call for submissions – Abstracts are submitted
 - Grading of Abstracts – Completed submissions are graded by grading committees
