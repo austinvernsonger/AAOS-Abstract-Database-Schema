@@ -5,6 +5,16 @@ Database: spec_web
 */
 
 /****** Object:  Table dbo.ABS_Call_Control    Script Date: 9/8/2016 1:41:05 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE dbo.ABS_Call_Control(
 	Call_Control_ID int IDENTITY(1,1) NOT NULL,
 	ORG_ID varchar(24) NOT NULL,
@@ -32,6 +42,16 @@ GO
 
 
 /****** Object:  Table dbo.ABS_Submissions    Script Date: 9/8/2016 1:45:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE dbo.ABS_Submissions(
 	Submission_ID int IDENTITY(1,1) NOT NULL,
 	Call_Control_ID int NOT NULL,
@@ -112,6 +132,16 @@ GO
 
 
 /****** Object:  Table dbo.ABS_Call_Questions    Script Date: 9/8/2016 1:44:31 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE dbo.ABS_Call_Questions(
 	Call_Control_ID int NOT NULL,
 	Primary_Question_ID int NOT NULL,
@@ -158,6 +188,16 @@ GO
 
 
 /****** Object:  Table dbo.ABS_Call_SubQuestions    Script Date: 9/8/2016 1:44:51 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE dbo.ABS_Call_SubQuestions(
 	Call_Control_ID int NOT NULL,
 	Primary_Question_ID int NOT NULL,
@@ -209,6 +249,17 @@ GO
 
 /****** Object:  Table dbo.ABS_Static_Questions    Script Date: 9/8/2016 1:45:38 PM ******/
 
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
+
 CREATE TABLE dbo.ABS_Static_Questions(
 	Static_Question_ID int NOT NULL,
 	Static_SubQuestion_ID int NOT NULL,
@@ -248,6 +299,16 @@ USE spec_web
 GO
 
 /****** Object:  Table dbo.ABS_Static_SubQuestions    Script Date: 9/8/2016 1:45:58 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 
 CREATE TABLE dbo.ABS_Static_SubQuestions(
 	Static_Question_ID int NOT NULL,
@@ -298,6 +359,16 @@ GO
 
 
 /****** Object:  Table dbo.ABS_Call_FileUpload    Script Date: 9/8/2016 1:41:45 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 
 CREATE TABLE dbo.ABS_Call_FileUpload(
 	Call_Control_ID int NOT NULL,
@@ -325,6 +396,16 @@ ALTER TABLE dbo.ABS_Call_FileUpload CHECK CONSTRAINT fk_FileUploadCallID
 GO
 
 /****** Object:  Table [dbo].[ABS_Presenter]    Script Date: 9/12/2016 9:00:15 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE [dbo].[ABS_Presenter](
 	[Presenter_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Submission_ID] [int] NOT NULL,
@@ -362,6 +443,17 @@ ALTER TABLE [dbo].[ABS_Presenter] CHECK CONSTRAINT [FK_ABS_Presenter_submission_
 GO
 
 /****** Object:  Table [dbo].[ABS_Disclosure_Tracking]    Script Date: 9/12/2016 8:59:25 AM ******/
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 SET ANSI_NULLS ON
 GO
 
@@ -390,6 +482,16 @@ GO
 
 
 /****** Object:  Table [dbo].[ABS_Submission_Question_Results]    Script Date: 9/12/2016 9:02:45 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE [dbo].[ABS_Submission_Question_Results](
 	[Submission_ID] [int] NOT NULL,
 	[Primary_Question_ID] [int] NOT NULL,
@@ -420,6 +522,16 @@ GO
 
 
 /****** Object:  Table [dbo].[ABS_Submission_CoAuthors]    Script Date: 9/12/2016 9:02:30 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE [dbo].[ABS_Submission_CoAuthors](
 	[Submission_CoAuthor_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Submission_ID] [int] NOT NULL,
@@ -456,6 +568,16 @@ ALTER TABLE [dbo].[ABS_Submission_CoAuthors] CHECK CONSTRAINT [FK__ABS_Submi__Su
 GO
 
 /****** Object:  Table [dbo].[ABS_Session]    Script Date: 9/12/2016 9:01:46 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE [dbo].[ABS_Session](
 	[Session_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Call_Control_ID] [int] NOT NULL,
@@ -486,6 +608,16 @@ GO
 
 
 /****** Object:  Table [dbo].[ABS_Scoring]    Script Date: 9/12/2016 9:00:52 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE [dbo].[ABS_Scoring](
 	[Submission_ID] [int] NOT NULL,
 	[ScoringType_ID] [int] NOT NULL,
@@ -525,6 +657,16 @@ GO
 
 
 /****** Object:  Table [dbo].[ABS_Scoring_Control]    Script Date: 9/12/2016 9:01:18 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE [dbo].[ABS_Scoring_Control](
 	[Scoring_Control_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Call_Control_ID] [int] NOT NULL,
@@ -551,6 +693,16 @@ REFERENCES [dbo].[ABS_Call_Control] ([Call_Control_ID])
 GO
 
 /****** Object:  Table [dbo].[ABS_Scoring_Types]    Script Date: 9/12/2016 9:01:34 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE [dbo].[ABS_Scoring_Types](
 	[ScoringType_ID] [int] NOT NULL,
 	[Scoring_Control_ID] [int] NOT NULL,
@@ -577,6 +729,16 @@ GO
 
 
 /****** Object:  Table [dbo].[ABS_Schedule]    Script Date: 9/12/2016 9:00:29 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+
 CREATE TABLE [dbo].[ABS_Schedule](
 	[ABS_Schedule_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Submission_ID] [int] NOT NULL,
